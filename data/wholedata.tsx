@@ -192,39 +192,52 @@ export const initialData: ResumeData = {
   projects: [
     {
       id: "p1",
-      title: "E-Commerce Dashboard",
+      title: "AIC TOUCH Application",
       description:
-        "A high-performance analytics dashboard for e-commerce merchants, processing over 1M events daily. Features real-time charting and data filtering.",
-      imageUrl: "https://picsum.photos/seed/dash/600/400",
-      tags: ["React", "D3.js", "Redux"],
-      link: "#",
+        "Worked as one of two frontend developers on the AIC TOUCH financial mobile app, responsible for building responsive UI components, improving user experience, and integrating features with backend APIs.",
+      imageUrl: "https://aiconline.assiddeek.net/web-aictouch.jpg",
+      objectFit: "cover",
+      tags: ["Flutter", "Bloc"],
+      link: "https://play.google.com/store/apps/details?id=net.aic.touchv2&hl=th",
     },
     {
       id: "p2",
-      title: "TaskMaster Pro",
-      description:
-        "Project management SaaS with drag-and-drop kanban boards, team chat, and file sharing. Built with offline-first architecture.",
-      imageUrl: "https://picsum.photos/seed/task/600/400",
-      tags: ["Next.js", "Supabase", "Tailwind"],
-      link: "#",
+      title: "iMaCS Website",
+      description: `
+        Collaborated in a two-developer team to build the full-stack iMaCS platform, an administrative and data management system for Islamic councils and mosques in Thailand.
+        Developed the frontend using Next.js, implementing dynamic pages, UI components, authentication, dashboard features, and integration with backend APIs.
+        Built and maintained the backend using C# .NET, designing REST APIs, business logic, role-based access, and secure data workflows.        
+        Designed and structured the Microsoft SQL Server database, including tables, relationships, stored procedures, and data models supporting the system’s core functionalities.
+        Contributed to testing, debugging, performance improvement, and deployment of the platform.`,
+      imageUrl: "https://imacscenter.org/logos/imacs.png",
+      objectFit: "contain",
+      tags: ["Next.js", "TypeScript", "Tailwind_CSS", "C#_.NET"],
+      link: "https://imacscenter.org/",
     },
     {
       id: "p3",
-      title: "HealthTracker App",
+      title: "iMaCS View Application",
       description:
-        "Mobile-responsive PWA for tracking fitness metrics and nutrition. Integrates with wearable APIs.",
-      imageUrl: "https://picsum.photos/seed/health/600/400",
-      tags: ["PWA", "React", "Workbox"],
-      link: "#",
+        "Served as the Flutter frontend developer for IMaCS View, a mobile app showing official prayer times for all IMaCS-registered mosques and provinces in Thailand, including UI development, API integration, and performance optimization.",
+      imageUrl: "https://imacscenter.org/logos/imacs.png",
+      objectFit: "contain",
+      tags: ["Flutter", "C#_.NET"],
+      link: "https://play.google.com/store/apps/details?id=com.imacs.imacsview&hl=en",
     },
     {
       id: "p4",
-      title: "FinTech Visualization",
+      title: "Graphics Portfolio - @blueyedo.graphics",
       description:
-        "Interactive financial modeling tool allowing users to simulate market conditions and visualize portfolio outcomes.",
-      imageUrl: "https://picsum.photos/seed/finance/600/400",
-      tags: ["Three.js", "WebGL", "TypeScript"],
-      link: "#",
+        "@blueyedo.graphics is a creative Instagram portfolio showcasing original graphic design works, visual branding, and digital artwork. Curated to highlight strong design aesthetics, visual communication skills, and multimedia creativity, this page reflects practical experience in graphic design, layout, and visual storytelling using tools such as Adobe Illustrator, Photoshop, and Premiere.",
+      imageUrl: "blueyedo.graphics.jpg",
+      objectFit: "cover",
+      tags: [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Adobe Premiere",
+        "SketchUp",
+      ],
+      link: "https://www.instagram.com/blueyedo.graphics/",
     },
   ],
 };

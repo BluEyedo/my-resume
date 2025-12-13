@@ -30,6 +30,7 @@ export interface ProjectItem {
   description: string;
   imageUrl: string;
   link?: string;
+  objectFit?: string;
   tags: string[];
 }
 
