@@ -1,5 +1,8 @@
+import { ReactHTMLElement } from "react";
+
 export interface Skill {
   name: string;
+  icon?: any;
   level: number; // 0-100
   category:
     | "frontend"
@@ -7,7 +10,8 @@ export interface Skill {
     | "fullstack"
     | "graphics"
     | "tools"
-    | "soft-skills";
+    | "soft-skills"
+    | "language";
 }
 
 export interface ExperienceItem {

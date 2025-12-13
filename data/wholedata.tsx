@@ -1,4 +1,6 @@
 import { ResumeData } from "@/types";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { LiaUniversitySolid } from "react-icons/lia";
 
 // Initial Mock Data
 export const initialData: ResumeData = {
@@ -7,8 +9,7 @@ export const initialData: ResumeData = {
   summary: `
   Frontend-focused Full-Stack developer, with experience in App development using Flutter, and Web development using TypeScript, and JavaScript frameworks such as React/Next.js. Skilled in creating modern responsive interfaces with Tailwind CSS.
   compined with some experience supporting these interfaces with backend development using C# .NET. 
-  Also having a background in graphic design helped me a lot in bridging the gap between design and development.
-  `,
+  Also having a background in graphic design helped me a lot in bridging the gap between design and development.`,
   contact: {
     email: "esaidfatani@gmail.com",
     phone: "(+66)954375136",
@@ -18,14 +19,30 @@ export const initialData: ResumeData = {
     website: "",
   },
   skills: [
+    { name: "HTML", level: 90, category: "frontend" },
+    { name: "CSS", level: 80, category: "frontend" },
+    { name: "JavaScript", level: 80, category: "frontend" },
+    { name: "TypeScript", level: 75, category: "frontend" },
+    { name: "Tailwind CSS", level: 85, category: "frontend" },
     { name: "React Next.js", level: 75, category: "frontend" },
-    { name: "TypeScript", level: 70, category: "frontend" },
+    { name: "Node.js", level: 30, category: "backend" },
+    { name: "Flutter", level: 60, category: "frontend" },
     { name: "C# .NET", level: 65, category: "backend" },
-    { name: "Node.js", level: 40, category: "backend" },
     { name: "PHP Laravel", level: 35, category: "backend" },
-    { name: "Tailwind CSS", level: 90, category: "frontend" },
-    { name: "Adobe Photoshop", level: 85, category: "graphics" },
-    { name: "Adobe Illustrator", level: 90, category: "graphics" },
+    { name: "Docker", level: 45, category: "backend" },
+
+    { name: "Adobe Photoshop", level: 75, category: "graphics" },
+    { name: "Adobe Illustrator", level: 88, category: "graphics" },
+    { name: "Adobe Premiere", level: 45, category: "graphics" },
+    { name: "Microsoft Office", level: 75, category: "graphics" },
+    { name: "Microsoft PowerPoint", level: 80, category: "graphics" },
+    { name: "Microsoft Excel", level: 45, category: "graphics" },
+    { name: "SketchUp", level: 50, category: "graphics" },
+
+    { name: "English", level: 85, category: "language" },
+    { name: "Thai", level: 55, category: "language" },
+    { name: "Malay", level: 30, category: "language" },
+    { name: "Arabic", level: 100, category: "language" },
   ],
   experience: [
     {
@@ -69,6 +86,7 @@ export const initialData: ResumeData = {
       description: `My university studies began with core fundamentals such as algorithms and programming in C++, Java in the first year, followed by SQL and database concepts in the second year.
       In the late years, the curriculum focused more on full web development, including HTML, CSS, JavaScript, and PHP Laravel framework.`,
       images: ["uni2.jpeg", "uni1.jpeg"],
+      icon: <LiaUniversitySolid className="text-blue-500 text-[28px] p-1" />,
       technologies: [
         "C++",
         "Java",
@@ -102,6 +120,72 @@ export const initialData: ResumeData = {
       description: `Attendance for HTML&CSS course organized by Teqani center, total of 20 hourse of training.`,
       images: ["teqqani2.jpeg"],
       technologies: ["HTML", "CSS"],
+    },
+    {
+      id: "3",
+      company: "Prince Of Songkhla University (Thailand)",
+      icon: <LiaUniversitySolid className="text-blue-500 text-[28px] p-1" />,
+      role: "Arabic Debate 2",
+      startDate: "2020",
+      // endDate: "2017",
+      description: `Received official recognition for contributing to the success of the World Arabic Language Day Festival, held on December 17–18, 2020. The participation supported activities related to Arabic language proficiency, skills development, and cultural promotion, and played a significant role in debate competition and won first place, in which contributed in the overall success of the event.`,
+      images: ["publicArab1.jpeg"],
+      technologies: [
+        "Communication",
+        "Teamwork",
+        "Critical Thinking",
+        "Public Speaking",
+        "Patience",
+        "Problem-Solving",
+        "Attention to Detail",
+        "Conflict Resolution",
+        "Leadership",
+      ],
+    },
+    {
+      id: "4",
+      company: "Prince Of Songkhla University (Thailand)",
+      icon: <LiaUniversitySolid className="text-blue-500 text-[28px] p-1" />,
+      role: "Arabic Debate 1",
+      startDate: "2019",
+      // endDate: "2017",
+      description: `Received official recognition for contributing to the success of the World Arabic Language Day Festival, held on December 17–18, 2019. The participation supported activities related to Arabic language proficiency, skills development, and cultural promotion, and played a significant role in debate competition which contributed in the overall success of the event.`,
+      images: ["publicArab2.jpeg"],
+      technologies: [
+        "Communication",
+        "Teamwork",
+        "Critical Thinking",
+        "Public Speaking",
+        "Patience",
+        "Conflict Resolution",
+      ],
+    },
+    {
+      id: "5",
+      company: "Fathoni University (Thailand)",
+      icon: <LiaUniversitySolid className="text-blue-500 text-[28px] p-1" />,
+      role: "Public Speaking Contest – 3rd Place",
+      startDate: "2019",
+      // endDate: "2017",
+      description: `Certificate of Achievement – International Language Academy, Fatoni University
+      Awarded for winning third place in the Public Speaking Contest held on February 14, 2019. Recognized for strong communication skills, confidence in public speaking, and effective delivery of structured speeches.`,
+      images: ["publicEng.jpeg"],
+      technologies: ["Confidence", "Communication", "Public Speaking"],
+    },
+    {
+      id: "6",
+      company: "Jungle Bungy Jump (Thailand)",
+      role: "Certificate of Courage",
+      startDate: "2019",
+      // endDate: "2017",
+      description: `Awarded for successfully completing a 50-meter bungy jump, demonstrating courage, mental resilience, and the ability to overcome high-pressure situations.`,
+      images: ["courage.jpeg"],
+      technologies: [
+        "Confidence",
+        "Taking Ownership",
+        "High Pressure Management",
+        "Resilience",
+      ],
     },
   ],
 

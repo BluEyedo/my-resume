@@ -72,13 +72,16 @@ const TimelineItem: React.FC<{ item: any; isLast: boolean }> = ({
             <div>
               <h3 className="text-lg font-bold text-slate-900">{item.role}</h3>
               <div className="flex items-center text-slate-600 font-medium mt-1">
-                <Building2 size={16} className="mr-2 text-blue-500" />
+                {item.icon ?? (
+                  <Building2 size={16} className="mr-2 text-blue-500" />
+                )}
+
                 {item.company}
               </div>
             </div>
             <div className="flex items-center text-slate-500 text-sm mt-2 sm:mt-0 bg-slate-50 px-3 py-1 rounded-full">
               <Calendar size={14} className="mr-2" />
-              {item.startDate} - {item.endDate}
+              {item.startDate} {item.endDate && `- ${item.endDate}`}
             </div>
           </div>
 

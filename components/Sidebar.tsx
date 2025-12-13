@@ -55,24 +55,24 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <p className="text-slate-500 text-sm mt-1">{title}</p>
       </div>
 
-      <div className="flex-1 overflow-y-auto py-6">
+      <div className="flex-1 overflow-y-auto mt-3">
         <nav className="px-4 space-y-1">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => onNavigate(item.id)}
-              className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 flex items-center ${
+              className={`w-full text-left px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center ${
                 activeSection === item.id
                   ? "bg-blue-50 text-blue-600 shadow-sm"
                   : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
               }`}
             >
-              <span className="capitalize">{item.label}</span>
+              <span className="capitalize text-sm">{item.label}</span>
             </button>
           ))}
         </nav>
 
-        <div className="px-8 mt-8">
+        <div className="px-8 mt-3">
           <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
             Contact
           </h3>
@@ -138,8 +138,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
 
-      <div className="p-6 border-t border-slate-100">
-        <button className="w-full flex items-center justify-center space-x-2 bg-slate-900 text-white py-2.5 rounded-lg hover:bg-slate-800 transition-colors font-medium text-sm shadow-lg shadow-slate-900/20">
+      <div className="p-3 border-t border-slate-100">
+        <button className="w-full flex items-center justify-center space-x-2 bg-slate-900 text-white py-2.5 rounded-lg hover:bg-slate-800 transition-colors font-medium  shadow-lg shadow-slate-900/20">
           <Briefcase size={16} />
           <span>Download PDF</span>
         </button>
