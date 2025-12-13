@@ -1,7 +1,13 @@
 export interface Skill {
   name: string;
   level: number; // 0-100
-  category: "frontend" | "backend" | "tools" | "soft-skills";
+  category:
+    | "frontend"
+    | "backend"
+    | "fullstack"
+    | "graphics"
+    | "tools"
+    | "soft-skills";
 }
 
 export interface ExperienceItem {

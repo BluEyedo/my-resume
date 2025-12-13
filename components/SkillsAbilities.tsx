@@ -24,7 +24,10 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
     (s) => s.category === "soft-skills" || s.category === "tools"
   );
   const techSkills = skills.filter(
-    (s) => s.category === "frontend" || s.category === "backend"
+    (s) =>
+      s.category === "frontend" ||
+      s.category === "backend" ||
+      s.category === "fullstack"
   );
 
   // Sort tech skills by level
@@ -82,9 +85,7 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
         <h3 className="text-lg font-bold text-slate-900 mb-2">
           Core Competencies
         </h3>
-        <p className="text-sm text-slate-500 mb-4">
-          Soft skills, leadership, and tools proficiency analysis.
-        </p>
+        <p className="text-sm text-slate-500 mb-4">proficiency analysis.</p>
         <div className="h-[350px] w-full flex-1">
           <ResponsiveContainer width="100%" height="100%">
             <RadarChart
@@ -95,11 +96,11 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
                 softSkills.length > 0
                   ? softSkills
                   : [
-                      { name: "Communication", level: 80 },
-                      { name: "Leadership", level: 75 },
-                      { name: "Problem Solving", level: 90 },
-                      { name: "Agile", level: 85 },
-                      { name: "Design", level: 60 },
+                      { name: "Communication", level: 65 },
+                      { name: "Leadership", level: 36 },
+                      { name: "Problem Solving", level: 45 },
+                      { name: "Programming", level: 75 },
+                      { name: "Design", level: 70 },
                     ]
               }
             >

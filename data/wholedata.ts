@@ -18,15 +18,14 @@ export const initialData: ResumeData = {
     website: "",
   },
   skills: [
-    { name: "React", level: 95, category: "frontend" },
-    { name: "TypeScript", level: 90, category: "frontend" },
-    { name: "Node.js", level: 80, category: "backend" },
-    { name: "GraphQL", level: 85, category: "backend" },
-    { name: "Tailwind CSS", level: 95, category: "frontend" },
-    { name: "System Design", level: 75, category: "soft-skills" },
-    { name: "Leadership", level: 80, category: "soft-skills" },
-    { name: "Agile/Scrum", level: 85, category: "tools" },
-    { name: "Figma", level: 70, category: "tools" },
+    { name: "React Next.js", level: 75, category: "frontend" },
+    { name: "TypeScript", level: 70, category: "frontend" },
+    { name: "C# .NET", level: 65, category: "backend" },
+    { name: "Node.js", level: 40, category: "backend" },
+    { name: "PHP Laravel", level: 35, category: "backend" },
+    { name: "Tailwind CSS", level: 90, category: "frontend" },
+    { name: "Adobe Photoshop", level: 85, category: "graphics" },
+    { name: "Adobe Illustrator", level: 90, category: "graphics" },
   ],
   experience: [
     {
