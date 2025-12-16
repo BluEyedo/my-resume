@@ -87,9 +87,9 @@ const TimelineItem: React.FC<{ item: ExperienceItem; isLast: boolean }> = ({
           </div>
 
           <div className="relative mb-4">
-            <p className="text-slate-600 leading-relaxed text-sm md:text-base pr-8">
+            <div className="text-slate-600 leading-relaxed text-sm md:text-base pr-8">
               {description}
-            </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap gap-2">
