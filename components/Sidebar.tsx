@@ -138,12 +138,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
 
-      <div className="p-3 border-t border-slate-100">
+      {/* <div className="p-3 border-t border-slate-100">
         <button className="w-full flex items-center justify-center space-x-2 bg-slate-900 text-white py-2.5 rounded-lg hover:bg-slate-800 transition-colors font-medium  shadow-lg shadow-slate-900/20">
           <Briefcase size={16} />
           <span>Download PDF</span>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -2,6 +2,8 @@ import { enhanceDescription } from "@/services/geminiService";
 import { Building2, Calendar, Wand2 } from "lucide-react";
 import React, { useState } from "react";
 import ImageViewer from "./ImageViewer";
+import ThumbnailGallery from "./ThumbnailGallery";
+import MultiImagesViewer from "./MultiImagesViewer";
 
 type Props = { items: any };
 
@@ -43,7 +45,8 @@ const TimelineItem: React.FC<{ item: any; isLast: boolean }> = ({
     }
   };
 
-  const [visible, setVisible] = useState(0);
+  // const [visible, setVisible] = useState(0);
+  const [visible, setVisible] = useState(false);
 
   return (
     <div className="relative md:pl-12 group">
@@ -54,24 +57,24 @@ const TimelineItem: React.FC<{ item: any; isLast: boolean }> = ({
 
       <div
         className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300
-      flex flex-row gap-4 items-center
+      flex flex-col lg:grid lg:grid-cols-5 gap-3  items-center
       "
       >
-        {item.images.map((item2, index2) => (
-          <img
-            src={item2}
-            key={index2}
-            className="h-[150px] border-blue-500 border rounded-md cursor-pointer"
-            onClick={() => setVisible(index2 + 1)}
+        <div className="sm:col-span-1">
+          <ThumbnailGallery
+            images={item.images}
+            onClick={() => setVisible(true)}
           />
-        ))}
 
-        {item.images.map((item2, index2) => {
-          if (visible == index2 + 1) {
-            return <ImageViewer src={item2} onClose={() => setVisible(0)} />;
-          }
-        })}
-        <div>
+          {visible && (
+            <MultiImagesViewer
+              files={item.images}
+              initialIndex={0}
+              onClose={() => setVisible(false)}
+            />
+          )}
+        </div>
+        <div className="col-span-4">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
             <div>
               <h3 className="text-lg font-bold text-slate-900">{item.role}</h3>
@@ -92,14 +95,6 @@ const TimelineItem: React.FC<{ item: any; isLast: boolean }> = ({
             <p className="text-slate-600 leading-relaxed text-sm md:text-base pr-8">
               {description ?? ""}
             </p>
-            {/* <button
-            onClick={handleEnhance}
-            disabled={isEnhancing}
-            className="absolute top-0 right-0 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all"
-            title="Enhance with AI"
-          >
-            <Wand2 size={16} className={isEnhancing ? "animate-spin" : ""} />
-          </button> */}
           </div>
 
           <div className="flex flex-wrap gap-2">

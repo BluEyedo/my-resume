@@ -44,12 +44,12 @@ const App: React.FC = () => {
         {/* Mobile Header */}
         <div className="lg:hidden bg-white p-4 shadow-sm flex justify-between items-center sticky top-0 z-20">
           <h1 className="font-bold text-slate-800">{resumeData.fullName}</h1>
-          <button
+          {/* <button
             onClick={() => setIsModalOpen(true)}
             className="p-2 bg-blue-100 text-blue-600 rounded-full"
           >
             <Sparkles size={20} />
-          </button>
+          </button> */}
         </div>
 
         <main className="p-6 lg:p-12 max-w-6xl mx-auto">
@@ -95,7 +95,7 @@ const App: React.FC = () => {
                     View All
                   </button>
                 </div>
-                <Experience items={resumeData.experience.slice(0, 2)} />
+                <Experience items={resumeData.experience.slice(0, 3)} />
               </section>
             </div>
           )}

@@ -3,7 +3,8 @@ import { ReactHTMLElement } from "react";
 export interface Skill {
   name: string;
   icon?: any;
-  level: number; // 0-100
+  lvl: number; // 0-100
+  exp?: string; // years
   category:
     | "frontend"
     | "backend"
@@ -16,11 +17,13 @@ export interface Skill {
 
 export interface ExperienceItem {
   id: string;
+  icon?: any;
+  images?: string[];
   company: string;
   role: string;
   startDate: string;
   endDate: string;
-  description: string;
+  description: any;
   technologies: string[];
 }
 
@@ -30,7 +33,9 @@ export interface ProjectItem {
   description: string;
   imageUrl: string;
   link?: string;
+  links?: { label: string; url: string }[];
   objectFit?: string;
+  type?: "freelance" | "coperate";
   tags: string[];
 }
 

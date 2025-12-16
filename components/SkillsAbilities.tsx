@@ -33,14 +33,14 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
   );
 
   // Sort tech skills by level
-  // techSkills.sort((a, b) => b.level - a.level);
-  lang.sort((a, b) => b.level - a.level);
-  // graphicSkils.sort((a, b) => b.level - a.level);
+  // techSkills.sort((a, b) => b.lvl - a.lvl);
+  lang.sort((a, b) => b.lvl - a.lvl);
+  // graphicSkils.sort((a, b) => b.lvl - a.lvl);
 
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 xl:grid-cols-5 gap-5">
       {/* Technical Proficiency Bar Chart */}
-      <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+      <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 col-span-3">
         <h3 className="text-lg font-bold text-slate-900 mb-3">
           Programming Stack
         </h3>
@@ -73,7 +73,14 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
                 }}
               />
               <Bar
-                dataKey="level"
+                dataKey="lvl"
+                fill="#3b82f6"
+                radius={[0, 4, 4, 0]}
+                barSize={20}
+                animationDuration={1500}
+              />
+              <Bar
+                dataKey="exp"
                 fill="#3b82f6"
                 radius={[0, 4, 4, 0]}
                 barSize={20}
@@ -116,7 +123,14 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
                 }}
               />
               <Bar
-                dataKey="level"
+                dataKey="lvl"
+                fill="#1BDA84"
+                radius={[0, 4, 4, 0]}
+                barSize={20}
+                animationDuration={1500}
+              />
+              <Bar
+                dataKey="exp"
                 fill="#1BDA84"
                 radius={[0, 4, 4, 0]}
                 barSize={20}
@@ -128,7 +142,7 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
       </div>
 
       {/* Core Competencies Radar Chart */}
-      <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col ">
+      <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col col-span-2">
         <h3 className="text-lg font-bold text-slate-900 mb-2">
           Core Competencies
         </h3>
@@ -144,10 +158,10 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
                   ? softSkills
                   : [
                       { name: "Communication", level: 65 },
-                      { name: "Leadership", level: 36 },
+                      { name: "Leadership", level: 46 },
                       { name: "Problem Solving", level: 45 },
-                      { name: "Programming", level: 75 },
-                      { name: "Design", level: 70 },
+                      { name: "Programming", level: 73 },
+                      { name: "Design", level: 69 },
                     ]
               }
             >
@@ -207,7 +221,7 @@ export const SkillsAbilities: React.FC<SkillsAbilitiesProps> = ({ skills }) => {
                 }}
               />
               <Bar
-                dataKey="level"
+                dataKey="lvl"
                 fill="#8C00FF"
                 radius={[0, 4, 4, 0]}
                 barSize={20}
