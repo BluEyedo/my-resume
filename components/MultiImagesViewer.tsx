@@ -112,13 +112,13 @@ export default function MultiImagesViewer({
       {files.length > 1 && (
         <>
           <button
-            className="absolute left-4 md:left-8 text-white text-3xl bg-black/40 rounded-full w-10 h-10 flex items-center justify-center z-[100000]"
+            className="absolute left-4 md:left-8 text-white text-3xl bg-black/40 rounded-full w-10 h-10 flex items-center justify-center z-[100000000000000]"
             onClick={goPrev}
           >
             ‹
           </button>
           <button
-            className="absolute right-4 md:right-8 text-white text-3xl bg-black/40 rounded-full w-10 h-10 flex items-center justify-center z-[100000]"
+            className="absolute right-4 md:right-8 text-white text-3xl bg-black/40 rounded-full w-10 h-10 flex items-center justify-center z-[100000000000000]"
             onClick={goNext}
           >
             ›
