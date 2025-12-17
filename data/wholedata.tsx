@@ -136,7 +136,7 @@ export const initialData: ResumeData = {
           static applications.{" "}
           <a
             className="text-blue-600 hover:text-blue-800"
-            href="/portfolio"
+            href="#portfolio"
             target="_blank"
             rel="noopener noreferrer"
           >

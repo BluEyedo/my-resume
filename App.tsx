@@ -31,6 +31,15 @@ const App: React.FC = () => {
     // };
 
     React.useEffect(() => {
+        if (typeof window != "undefined") {
+            if (window.location.href.includes("portfolio")) {
+                setActiveSection("portfolio");
+                console.log(window.location.href.split("/").pop());
+            }
+        }
+    }, []);
+
+    React.useEffect(() => {
         document.getElementById("content-container").scrollIntoView({
             behavior: "smooth",
             block: "nearest",
