@@ -134,6 +134,10 @@ const App: React.FC = () => {
         onClose={() => setIsModalOpen(false)}
         onSubmit={handleResumeParse}
       /> */}
+
+            <div className="bg-black/40 p-2 fixed bottom-0 w-full z-[10000] text-white text-xs text-center">
+                © 2025 BluEyedo — Built with TypeScript, React, Tailwind CSS & Vite.
+            </div>
         </div>
     );
 };
