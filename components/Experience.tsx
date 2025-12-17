@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ExperienceItem } from "../types";
 import { Calendar, Building2, Wand2 } from "lucide-react";
-import { enhanceDescription } from "../services/geminiService";
+// import { enhanceDescription } from "../services/geminiService";
 import ThumbnailGallery from "./ThumbnailGallery";
 import MultiImagesViewer from "./MultiImagesViewer";
 
@@ -33,17 +33,17 @@ const TimelineItem: React.FC<{ item: ExperienceItem; isLast: boolean }> = ({
   const [description, setDescription] = useState(item.description);
   const [isEnhancing, setIsEnhancing] = useState(false);
 
-  const handleEnhance = async () => {
-    setIsEnhancing(true);
-    try {
-      const improved = await enhanceDescription(description);
-      setDescription(improved);
-    } catch (err) {
-      // Fallback silently
-    } finally {
-      setIsEnhancing(false);
-    }
-  };
+  // const handleEnhance = async () => {
+  //   setIsEnhancing(true);
+  //   try {
+  //     const improved = await enhanceDescription(description);
+  //     setDescription(improved);
+  //   } catch (err) {
+  //     // Fallback silently
+  //   } finally {
+  //     setIsEnhancing(false);
+  //   }
+  // };
 
   const [visible, setVisible] = useState(false);
 

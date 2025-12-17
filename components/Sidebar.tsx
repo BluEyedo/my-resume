@@ -37,7 +37,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   return (
-    <div className="w-full lg:w-80 bg-white lg:h-screen lg:fixed lg:left-0 top-0 border-r border-slate-200 flex flex-col shadow-sm z-10">
+    <div className="w-full lg:w-80 bg-white lg:h-screen lg:fixed lg:left-0 top-0 border-r border-slate-200 flex flex-col shadow-sm z-10 pb-2">
       <div className="p-6 flex flex-col items-center text-center border-b border-slate-100">
         <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-slate-100 shadow-inner mb-4 bg-slate-200">
           <img

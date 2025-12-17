@@ -37,54 +37,43 @@ export default function ThumbnailGallery({
   }
 
   return (
-    <div
-      className={`inline-grid ${gridCols}   shadow-md border rounded-xl  w-[300px] lg:w-[${containerWidth}vw] h-[160px] duration-200 
+      <div
+          className={`inline-grid ${gridCols}   shadow-md border rounded-xl  w-[300px] lg:w-[${containerWidth}vw] 2xl:w-full h-[160px] duration-200 
       hover:-translate-y-1 hover:scale-105 hover:shadow-lg overflow-hidden bg-gray-200`}
-    >
-      {displayImages.map((src, index) => (
-        <div
-          key={index}
-          className="relative cursor-pointer overflow-hidden"
-          style={{
-            height: `${thumbnailHeight}px`,
-            width: `${thumbnailSize}px`,
-          }}
-          onClick={() => onClick(index)}
-        >
-          {/* IMAGE OR VIDEO POSTER */}
-          {isVideo(src) ? (
-            <video
-              src={src}
-              className="object-cover w-full h-full"
-              muted
-              preload="metadata"
-            />
-          ) : (
-            <img
-              src={src}
-              alt={`Thumbnail ${index + 1}`}
-              className="object-cover w-full h-full"
-            />
-          )}
+      >
+          {displayImages.map((src, index) => (
+              <div
+                  key={index}
+                  className="relative cursor-pointer overflow-hidden"
+                  style={{
+                      height: `${thumbnailHeight}px`,
+                      width: `${thumbnailSize}px`,
+                  }}
+                  onClick={() => onClick(index)}
+              >
+                  {/* IMAGE OR VIDEO POSTER */}
+                  {isVideo(src) ? (
+                      <video src={src} className="object-cover w-full h-full" muted preload="metadata" />
+                  ) : (
+                      <img src={src} alt={`Thumbnail ${index + 1}`} className="object-cover w-full h-full" />
+                  )}
 
-          {/* PLAY ICON OVERLAY FOR VIDEOS */}
-          {isVideo(src) && (
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <div className="text-white text-3xl opacity-90">▶</div>
-            </div>
-          )}
+                  {/* PLAY ICON OVERLAY FOR VIDEOS */}
+                  {isVideo(src) && (
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                          <div className="text-white text-3xl opacity-90">▶</div>
+                      </div>
+                  )}
 
-          {/* MORE COUNT OVERLAY (only on 4th image if more exist) */}
-          {index === 3 && remainingCount > 0 && (
-            <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-              <div className="text-white text-2xl font-semibold">
-                +{remainingCount}
+                  {/* MORE COUNT OVERLAY (only on 4th image if more exist) */}
+                  {index === 3 && remainingCount > 0 && (
+                      <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                          <div className="text-white text-2xl font-semibold">+{remainingCount}</div>
+                      </div>
+                  )}
               </div>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+          ))}
+      </div>
   );
 }
 

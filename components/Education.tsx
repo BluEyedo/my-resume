@@ -1,4 +1,4 @@
-import { enhanceDescription } from "@/services/geminiService";
+// import { enhanceDescription } from "@/services/geminiService";
 import { Building2, Calendar, Wand2 } from "lucide-react";
 import React, { useState } from "react";
 import MultiImagesViewer from "./MultiImagesViewer";
@@ -33,17 +33,17 @@ const TimelineItem: React.FC<{ item: any; isLast: boolean }> = ({
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [visible, setVisible] = useState(false);
 
-  const handleEnhance = async () => {
-    setIsEnhancing(true);
-    try {
-      const improved = await enhanceDescription(description);
-      setDescription(improved);
-    } catch (err) {
-      // Fallback silently
-    } finally {
-      setIsEnhancing(false);
-    }
-  };
+  // const handleEnhance = async () => {
+  //   setIsEnhancing(true);
+  //   try {
+  //     const improved = await enhanceDescription(description);
+  //     setDescription(improved);
+  //   } catch (err) {
+  //     // Fallback silently
+  //   } finally {
+  //     setIsEnhancing(false);
+  //   }
+  // };
 
   return (
     <div className="relative md:pl-12 group">

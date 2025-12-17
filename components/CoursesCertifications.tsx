@@ -1,4 +1,4 @@
-import { enhanceDescription } from "@/services/geminiService";
+// import { enhanceDescription } from "@/services/geminiService";
 import { Building2, Calendar, Wand2 } from "lucide-react";
 import React, { useState } from "react";
 import ImageViewer from "./ImageViewer";
@@ -36,8 +36,8 @@ const TimelineItem: React.FC<{ item: any; isLast: boolean }> = ({
   const handleEnhance = async () => {
     setIsEnhancing(true);
     try {
-      const improved = await enhanceDescription(description);
-      setDescription(improved);
+      // const improved = await enhanceDescription(description);
+      // setDescription(improved);
     } catch (err) {
       // Fallback silently
     } finally {
